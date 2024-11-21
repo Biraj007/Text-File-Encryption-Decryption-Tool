@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text & File Encryption-Decryption Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Text & File Encryption-Decryption Tool</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#preview">Preview</a></li>
+            <li><a href="#demo">Demo Video</a></li>
+            <li><a href="#files">Project Files</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>The Text & File Encrypter and Decrypter is a Python-based GUI desktop application for securely encrypting and decrypting text and files using the AES encryption algorithm. This application supports AES-CBC and AES-GCM encryption modes, offering users a robust mechanism to protect sensitive data. It includes features to verify the integrity of decrypted messages, ensuring the correctness of encrypted data.</p>
+            <p>This application was developed as part of the Final Year Project for the CSE-Cybersecurity Curriculum, under the domain of Cryptography and Data Security. The application combines cryptographic principles with a user-friendly interface to address real-world data protection challenges.</p>
+        </section>
+        <section id="details">
+            <h2>Details</h2>
+            <div class="details-content">
+                <p><strong>Programming Languages:</strong> Python</p>
+                <p><strong>Technologies Used:</strong> Tkinter, Crypto module, Hashlib, Base64</p>
+                <p><strong>Key Features:</strong> AES encryption (CBC & GCM), Password Protection, Integrity Verification, Lockout Mechanism, Text/File Encryption and Decryption</p>
+                <p><strong>Purpose:</strong> A secure and user-friendly application for encrypting and decrypting sensitive text and files.</p>
+            </div>
+        </section>
+
+        <!-- Preview Section -->
+        <section id="preview">
+            <h2>Preview</h2>
+            <div class="preview-gallery">
+                <div class="preview-card">
+                    <img src="images/screenshot1.png" alt="Login Page Screenshot" onclick="openModal(this)">
+                    <p>Login Page</p>
+                </div>
+                <div class="preview-card">
+                    <img src="images/screenshot2.png" alt="Encryption Interface Screenshot" onclick="openModal(this)">
+                    <p>Main Interface</p>
+                </div>
+            </div>
+            <div class="preview-gallery">
+                <div class="preview-card">
+                    <img src="images/screenshot3.png" alt="Decryption Results Screenshot" onclick="openModal(this)">
+                    <p>Encryption Screen</p>
+                </div>
+                <div class="preview-card">
+                    <img src="images/screenshot4.png" alt="Settings Page Screenshot" onclick="openModal(this)">
+                    <p>Decryption screen</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo">
+    <h2>Project Demonstration Video</h2>
+    <div class="video-container">
+        <iframe 
+            width="80%" 
+            height="450" 
+            src="https://www.youtube.com/embed/fxifL7Q9HJ8" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+        <section id="files">
+            <h2>Project Files</h2>
+            <div class="file-grid">
+                <div class="file-card">
+                    <a href="files/TextFileEncryptionDecryptionTool.pptx" target="_blank" download>
+                        <img src="images/ppt-icon.png" alt="PPT Icon">
+                        <h3>PowerPoint Presentation</h3>
+                    </a>
+                </div>
+                <div class="file-card">
+                    <a href="files/ProjectReport.pdf" target="_blank" download>
+                        <img src="images/pdf-icon.png" alt="PDF Icon">
+                        <h3>Project Report</h3>
+                    </a>
+                </div>
+                <div class="file-card">
+                    <a href="https://github.com/Arthur00199/Encrypter" target="_blank">
+                        <img src="images/github-icon.png" alt="GitHub Icon">
+                        <h3>GitHub Repository</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="credits">
+            <h2>Credits</h2>
+            <p>Developed by:</p>
+            <div class="team">
+                <a href="https://www.linkedin.com/in/biraj-naskar/" target="_blank">Biraj Naskar</a>
+                <a href="https://www.linkedin.com/in/debalina-ghosh-05b600258/" target="_blank">Debalina Ghosh</a>
+                <a href="https://adityadhanarajkundu.vercel.app/" target="_blank">Aditya Kundu</a>
+                <a href="https://www.linkedin.com/in/arpan-halder-89904221a" target="_blank">Arpan Haldar</a>
+                <a href="https://www.linkedin.com/in/anurag-karmakar-87b9a7222" target="_blank">Anurag Karmakar</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Text & File Encryption-Decryption Tool. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- JavaScript for Modal functionality -->
+    <script>
+        // Open modal
+        function openModal(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // Close modal
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+<!-- Hello it's me BIRAJ the web developer of this project, Thanks for checking it out :) -->
